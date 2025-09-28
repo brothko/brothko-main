@@ -1,0 +1,316 @@
+.admin-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.admin-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 0 3rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-header h1 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.admin-header p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contacts-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-table thead {
+  background-color: #f8fafc;
+}
+
+.contacts-table th {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.contacts-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.contacts-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.date-cell {
+  width: 140px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.name-cell {
+  width: 150px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.email-cell,
+.phone-cell {
+  width: 180px;
+}
+
+.service-cell {
+  width: 140px;
+}
+
+.service-badge {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.message-cell {
+  width: 300px;
+  max-width: 300px;
+}
+
+.message-preview {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.actions-cell {
+  width: 80px;
+  text-align: right;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.email-link,
+.phone-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.email-link:hover,
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #eb0909;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
+
+.copy-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background-color: #059669;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+}
+
+.login-section {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .admin-actions {
+    justify-content: center;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .contacts-table {
+    font-size: 14px;
+  }
+
+  .contacts-table th,
+  .contacts-table td {
+    padding: 12px 8px;
+  }
+
+  .message-cell {
+    max-width: 200px;
+  }
+
+  .action-buttons {
+    justify-content: flex-end;
+  }
+
+  .login-section {
+    padding: 1rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff40;
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

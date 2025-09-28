@@ -272,19 +272,22 @@ const Contact = () => {
                     placeholder="Tell us about your project or how we can help you..."
                   ></textarea>
                 </div>
-                 {submitStatus === 'success' && (
-                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6">
-                  <p className="font-medium">Thank you for your message!</p>
-                  <p className="text-sm">We'll get back to you within 24 hours.</p>
-                </div>
-              )}
+                <div>
+                  {submitStatus === 'success' && (
+                    <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6">
+                      <p className="text-base font-bold">Thank you for your message!</p>
+                      <p className="text-sm font-bold">We'll get back to you within 24 hours.</p>
+                    </div>
+                  )}
 
-              {submitStatus === 'error' && (
-                <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-6">
-                  <p className="font-medium">Error submitting form</p>
-                  <p className="text-sm">Please try again later.</p>
+                  {submitStatus === 'error' && (
+                    <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-6">
+                      <p className="text-base font-bold">Error submitting form</p>
+                      <p className="text-sm font-bold">Please try again later.</p>
+                    </div>
+                  )}
+
                 </div>
-              )}
 
                 <button
                   type="submit"

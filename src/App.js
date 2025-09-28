@@ -12,6 +12,7 @@ import AboutWeb from './components/Website/Aboutweb';
 import AboutMobile from './components/mobile/AboutMobile';
 import AboutAndroid from './components/mobile/android/AboutAndroid';
 import Aboutios from './components/mobile/ios/Aboutios';
+import Admin from './pages/Admin/Admin';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/aboutmobile" element={<AboutMobile />} />
             <Route path="/aboutandroid" element={<AboutAndroid />} />
             <Route path="/aboutios" element={<Aboutios />} />
+            <Route path="/admin" element={<Admin />} />
 
           </Routes>
         </main>
