@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDhr3OxtO9Pxp6b2d6L7k8urm5b-mZ6pIE",
+  authDomain: "brothkoweb.firebaseapp.com",
+  projectId: "brothkoweb",
+  storageBucket: "brothkoweb.firebasestorage.app",
+  messagingSenderId: "979709019661",
+  appId: "1:979709019661:web:0846020587fe5c48a03744"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,12 +40,25 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('');
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Save form data to Firestore
+      await addDoc(collection(db, "contacts"), {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        timestamp: new Date()
+      });
+
       setIsSubmitting(false);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    }, 2000);
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+      setIsSubmitting(false);
+      setSubmitStatus('error');
+    }
   };
 
   const services = [
@@ -170,12 +199,6 @@ const Contact = () => {
             <div className="contact-form">
               <h2 className="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h2>
 
-              {submitStatus === 'success' && (
-                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6">
-                  <p className="font-medium">Thank you for your message!</p>
-                  <p className="text-sm">We'll get back to you within 24 hours.</p>
-                </div>
-              )}
 
               <form onSubmit={handleSubmit}>
                 <div className="form-row">
@@ -249,6 +272,19 @@ const Contact = () => {
                     placeholder="Tell us about your project or how we can help you..."
                   ></textarea>
                 </div>
+                 {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6">
+                  <p className="font-medium">Thank you for your message!</p>
+                  <p className="text-sm">We'll get back to you within 24 hours.</p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-6">
+                  <p className="font-medium">Error submitting form</p>
+                  <p className="text-sm">Please try again later.</p>
+                </div>
+              )}
 
                 <button
                   type="submit"

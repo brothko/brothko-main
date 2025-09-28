@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
-      title: "Custom Web Development",
+      title: "Website Development",
       description: "We build scalable, high-performance web applications tailored to your business needs using the latest technologies.",
       icon: "💻",
       features: ["React/Vue/Angular", "Node.js/Python", "REST/GraphQL APIs", "Progressive Web Apps"]
@@ -21,24 +21,24 @@ const Services = () => {
       icon: "☁️",
       features: ["AWS, Azure, GCP", "Docker & Kubernetes", "CI/CD Pipelines", "Infrastructure as Code"]
     },
-    {
-      title: "UI/UX Design",
-      description: "Transform your ideas into intuitive, beautiful interfaces that delight users and drive business growth.",
-      icon: "🎨",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
-    },
+    // {
+    //   title: "UI/UX Design",
+    //   description: "Transform your ideas into intuitive, beautiful interfaces that delight users and drive business growth.",
+    //   icon: "🎨",
+    //   features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
+    // },
     {
       title: "Quality Assurance",
       description: "Ensure your software meets the highest standards with comprehensive testing and quality assurance processes.",
       icon: "🔍",
       features: ["Automated Testing", "Performance Testing", "Security Audits", "Cross-browser Testing"]
     },
-    {
-      title: "Digital Transformation",
-      description: "Modernize your business with comprehensive digital solutions that integrate seamlessly with your existing systems.",
-      icon: "🚀",
-      features: ["Legacy System Migration", "Microservices", "API Integration", "Data Analytics"]
-    }
+    // {
+    //   title: "Digital Transformation",
+    //   description: "Modernize your business with comprehensive digital solutions that integrate seamlessly with your existing systems.",
+    //   icon: "🚀",
+    //   features: ["Legacy System Migration", "Microservices", "API Integration", "Data Analytics"]
+    // }
   ];
 
   return (
@@ -48,8 +48,8 @@ const Services = () => {
           <div className="hero-content">
             <h1>Comprehensive Software Solutions</h1>
             <p>
-              We deliver end-to-end software solutions that empower businesses to 
-              innovate, scale, and succeed in the digital age. From concept to deployment, 
+              We deliver end-to-end software solutions that empower businesses to
+              innovate, scale, and succeed in the digital age. From concept to deployment,
               we're with you every step of the way.
             </p>
             <div className="hero-buttons">
@@ -68,10 +68,10 @@ const Services = () => {
         <div className="container">
           <h2 className="section-title">Our Core Services</h2>
           <p className="section-subtitle">
-            We offer a complete suite of software services designed to meet your 
+            We offer a complete suite of software services designed to meet your
             unique business challenges and help you achieve your digital goals.
           </p>
-          
+
           <div className="services-grid">
             {services.map((service, index) => (
               <div key={index} className="service-card">
@@ -97,34 +97,45 @@ const Services = () => {
           <div className="text-center mb-12">
             <h2 className="section-title">Our Development Process</h2>
             <p className="section-subtitle">
-              We follow a proven, collaborative process that ensures quality results 
+              We follow a proven, collaborative process that ensures quality results
               and keeps you informed every step of the way.
             </p>
           </div>
-          
+
           <div className="program-benefits">
             <div className="benefit-item">
               <span className="benefit-icon">📋</span>
               <h3>Discovery & Planning</h3>
               <p>Deep understanding of your goals, requirements, and technical needs</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">🎨</span>
               <h3>Design & Prototyping</h3>
               <p>Creating beautiful, functional designs with user feedback loops</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">💻</span>
               <h3>Development & Testing</h3>
               <p>Building robust solutions with comprehensive quality assurance</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">🚀</span>
               <h3>Deployment & Support</h3>
               <p>Seamless launch with ongoing maintenance and optimization</p>
+            </div>
+            <div className="benefit-item">
+              <span className="benefit-icon">⚡</span>
+              <h3>Agility</h3>
+              <p>We are dedicated and committed to meeting clients' expectations through an agile development process.</p>
+            </div>
+
+            <div className="benefit-item">
+              <span className="benefit-icon">🔍</span>
+              <h3>Quality</h3>
+              <p>We offer effective solutions to achieve overall operational efficiency.</p>
             </div>
           </div>
         </div>

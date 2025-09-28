@@ -586,7 +586,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO  bg-light
    ========================================================================== */
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -595,6 +595,8 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
 }
 
 .hero::before {
@@ -637,7 +639,62 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+/* .hero {
+  background: url('./../public/bgimage.jpg') no-repeat center center/cover; 
+  color: #2d3748; 
+  padding: 12rem 0 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7); 
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; 
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #1a202c;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4a5568; 
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2; 
+} */
 .primary-btn {
   background: white;
   color: #667eea;
@@ -2106,4 +2163,217 @@ ul.pricing-features li {
     -webkit-text-fill-color: black !important;
     color: black !important;
   }
+}
+
+/* Skills Section Styles */
+.skills-section {
+  margin-top: 4rem;
+  padding: 3rem 0;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-header .section-title {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skills-header .section-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.skill-label {
+  font-size: 0.75rem;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    gap: 0.75rem;
+  }
+  
+  .skill-group {
+    min-width: 70px;
+  }
+  
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .skill-label {
+    font-size: 0.7rem;
+  }
+  
+  .skills-header .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    justify-content: flex-start;
+  }
+  
+  .skill-group {
+    min-width: 60px;
+    flex: 1 1 calc(25% - 0.75rem);
+  }
+}
+
+/* Premier Software Services Provider */
+/* CSS for Services Section */
+.services-section {
+  padding: 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.section-title {
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.web-dev-card {
+  color: #1e40af;
+}
+
+.web-dev-card .service-icon {
+  background-color: #bfdbfe;
+}
+
+.ios-dev-card {
+  color: #92400e;
+}
+
+.ios-dev-card .service-icon {
+  background-color: #fde68a;
+}
+
+.android-dev-card {
+  color: #065f46;
+}
+
+.android-dev-card .service-icon {
+  background-color: #a7f3d0;
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.service-card p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.read-more {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.web-dev-card:hover {
+  background-color: #bfdbfe;
+}
+
+.ios-dev-card:hover {
+  background-color: #fde68a;
+}
+
+.android-dev-card:hover {
+  background-color: #a7f3d0;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2);
+}
+
+.service-card:hover .read-more {
+  text-decoration: underline;
+  color: inherit;
 }

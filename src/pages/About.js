@@ -57,6 +57,140 @@ const About = () => {
             </div>
           </div>
         </div>
+        {/* Our Skills Section */}
+          <div className="skills-section">
+            <div className="skills-header">
+              <h2 className="section-title">Our Skills</h2>
+              <p className="section-subtitle">
+                We believe as development company that latest tech stack always plays a vital role. 
+                Our USP lies in applying our near-expert knowledge to various verticals, and creating use
+              </p>
+              <p className="section-subtitle">
+                cases that set the standard for the entire industry.
+              </p>
+            </div>
+
+            <div className="skills-grid">
+              {/* iOS Development */}
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/xcode.png" alt="XCode" className="skill-icon" />
+                <span className="skill-label">X-Code</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/swift.png" alt="Swift" className="skill-icon" />
+                <span className="skill-label">Swift</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/objective-c.png" alt="Objective-C" className="skill-icon" />
+                <span className="skill-label">Objective-C</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/cocoapods.png" alt="CocoaPods" className="skill-icon" />
+                <span className="skill-label">CocoaPods</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/ios-simulator.png" alt="Simulator" className="skill-icon" />
+                <span className="skill-label">Simulator</span>
+              </div> */}
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" className="skill-icon" />
+                <span className="skill-label">Firebase</span>
+              </div>
+
+              {/* Android Development */}
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/android.png" alt="Android SDK" className="skill-icon" />
+                <span className="skill-label">Android SDK</span>
+              </div> */}
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/android-studio.png" alt="Android Studio" className="skill-icon" />
+                <span className="skill-label">Android Studio</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/kotlin.png" alt="Kotlin" className="skill-icon" />
+                <span className="skill-label">Kotlin</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" className="skill-icon" />
+                <span className="skill-label">Java</span>
+              </div>
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/android-studio-avd-manager.png" alt="AVD Manager" className="skill-icon" />
+                <span className="skill-label">AVD Manager</span>
+              </div> */}
+
+              {/* Web Development */}
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP" className="skill-icon" />
+                <span className="skill-label">PHP</span>
+              </div> */}
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL" className="skill-icon" />
+                <span className="skill-label">MySQL</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" className="skill-icon" />
+                <span className="skill-label">Node.js</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="AngularJS" className="skill-icon" />
+                <span className="skill-label">AngularJS</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="ReactJS" className="skill-icon" />
+                <span className="skill-label">React JS</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" className="skill-icon" />
+                <span className="skill-label">HTML5</span>
+              </div>
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/sqlite.png" alt="SQLite" className="skill-icon" />
+                <span className="skill-label">SQLite</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/graphql.png" alt="GraphQL" className="skill-icon" />
+                <span className="skill-label">GraphQL</span>
+              </div> */}
+
+              {/* <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/json.png" alt="JSON" className="skill-icon" />
+                <span className="skill-label">JSON</span>
+              </div> */}
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" className="skill-icon" />
+                <span className="skill-label">MongoDB</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" className="skill-icon" />
+                <span className="skill-label">JavaScript</span>
+              </div>
+
+              <div className="skill-group">
+                <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" className="skill-icon" />
+                <span className="skill-label">CSS</span>
+              </div>
+            </div>
+          </div>
+
       </section>
 
       <section className="section">

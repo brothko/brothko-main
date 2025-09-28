@@ -9,8 +9,8 @@ const Home = () => {
         <div className="hero-content">
           <h1>A Better Place To Work</h1>
           <p>
-            We believe that a thriving workplace is the foundation of success. 
-            We are committed to creating an environment where innovation, 
+            We believe that a thriving workplace is the foundation of success.
+            We are committed to creating an environment where innovation,
             collaboration, and personal growth flourish.
           </p>
           <div className="hero-buttons">
@@ -29,53 +29,53 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Why Choose Our Virtual Programs?</h2>
           <p className="section-subtitle">
-            Our comprehensive programs are designed to equip you with the skills, 
+            Our comprehensive programs are designed to equip you with the skills,
             experience, and credentials needed to excel in the tech industry.
           </p>
-          
+
           <div className="program-benefits">
             <div className="benefit-item">
               <span className="benefit-icon">⏰</span>
               <h3>Flexible Learning</h3>
               <p>Our virtual programs offer flexible schedules to fit your lifestyle and busy commitments.</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">👨‍🏫</span>
               <h3>Training by Industry Trainers</h3>
               <p>Benefit from high-quality training delivered by industry experts with real-world experience.</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">💻</span>
               <h3>Real-World Projects</h3>
               <p>Gain hands-on experience by working on real-world projects that matter.</p>
             </div>
-            
-            <div className="benefit-item">
+
+            {/* <div className="benefit-item">
               <span className="benefit-icon">🏆</span>
               <h3>Certificate of Internship</h3>
               <p>Certificate of Internship upon completing your task and assessments.</p>
-            </div>
-            
+            </div> */}
+
             <div className="benefit-item">
               <span className="benefit-icon">📜</span>
               <h3>Certificate of Training</h3>
               <p>Certificate of Training upon completing your coursework and assessments.</p>
             </div>
-            
-            <div className="benefit-item">
+
+            {/* <div className="benefit-item">
               <span className="benefit-icon">📊</span>
               <h3>Evaluation Report</h3>
               <p>Feedback on your performance with a detailed evaluation report.</p>
-            </div>
-            
+            </div> */}
+
             <div className="benefit-item">
               <span className="benefit-icon">🎁</span>
               <h3>Goodies for Top Candidates</h3>
               <p>Top-performing candidates will receive exciting goodies to reward excellence.</p>
             </div>
-            
+
             <div className="benefit-item">
               <span className="benefit-icon">💼</span>
               <h3>Full-Time Opportunity</h3>
@@ -108,6 +108,31 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Services Section with Image-based UI */}
+          <section className="services-section">
+            <h4 className="section-subtitle">Services</h4>
+            <h2 className="section-title" style={{ fontWeight: 'bold' }}>Place to get solution for your business needs</h2>
+            <div className="services-grid">
+              <div className="service-card web-dev-card">
+                <div className="service-icon">📝</div>
+                <h3>Website Development</h3>
+                <p>High end trailer made web solution using State-of-the-art technologies</p>
+                <Link to="/aboutweb" className="read-more">Read More →</Link>
+              </div>
+              <div className="service-card ios-dev-card">
+                <div className="service-icon">🍏</div>
+                <h3>IOS Development</h3>
+                <p>Craft innovative, robust, scalable, intuitive, and user-friendly apps for iPhone, iPad</p>
+                <Link to="/aboutios" className="read-more">Read More →</Link>
+              </div>
+              <div className="service-card android-dev-card">
+                <div className="service-icon">🤖</div>
+                <h3>Android Development</h3>
+                <p>Develop feature-rich, scalable and cost-effective apps customized for your business</p>
+                <Link to="/aboutandroid" className="read-more">Read More →</Link>
+              </div>
+            </div>
+          </section>
 
       {/* Premier Software Services Provider */}
       <section className="section">
@@ -115,8 +140,8 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="section-title">Premier Software Services Provider</h2>
             <p className="section-subtitle">
-              As a certified and recognized entity in the industry, we bring a wealth 
-              of expertise to every project, ensuring exceptional results tailored 
+              As a certified and recognized entity in the industry, we bring a wealth
+              of expertise to every project, ensuring exceptional results tailored
               to your unique needs.
             </p>
           </div>
@@ -149,8 +174,8 @@ const Home = () => {
           <div className="text-center mb-12">
             <h2 className="section-title">Most Affordable Budget-Friendly Pricing</h2>
             <p className="section-subtitle">
-              At Brothko, we believe that cutting-edge software shouldn't come with a hefty price tag. 
-              That's why we're committed to providing affordable solutions that empower businesses 
+              At Brothko, we believe that cutting-edge software shouldn't come with a hefty price tag.
+              That's why we're committed to providing affordable solutions that empower businesses
               of all sizes to thrive in the digital age.
             </p>
           </div>
@@ -159,10 +184,10 @@ const Home = () => {
             <div className="pricing-badge">Most Popular</div>
             <h3>Competitive Pricing</h3>
             <p className="text-xl mb-6 text-gray-600">
-              With our cost-effective software offerings, you can harness the power 
+              With our cost-effective software offerings, you can harness the power
               of technology without breaking the bank.
             </p>
-            
+
             <ul className="pricing-features">
               <li>Custom Software Development</li>
               <li>24/7 Technical Support</li>
@@ -170,7 +195,7 @@ const Home = () => {
               <li>Scalable Solutions</li>
               <li>Free Consultation</li>
             </ul>
-            
+
             <div className="pricing-cta">
               <Link to="/contact" className="btn btn-primary btn-full">
                 Get a Free Quote
