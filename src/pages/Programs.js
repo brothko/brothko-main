@@ -7,40 +7,40 @@ const Programs = () => {
             title: "Full-Stack Development",
             description: "Master both frontend and backend development with hands-on projects and real-world applications using modern technologies.",
             icon: "💻",
-            duration: "12 weeks",
-            level: "Intermediate",
+            // duration: "12 weeks",
+            // level: "Intermediate",
             features: ["React & Node.js", "Database Design", "API Development", "Deployment"]
         },
         {
             title: "Mobile App Development",
             description: "Learn to build cross-platform mobile applications using React Native and Flutter with focus on performance and user experience.",
             icon: "📱",
-            duration: "10 weeks",
-            level: "Beginner",
+            // duration: "10 weeks",
+            // level: "Beginner",
             features: ["React Native", "Flutter", "State Management", "App Store Deployment"]
         },
         {
             title: "Cloud Computing & DevOps",
             description: "Get certified in cloud technologies and learn to deploy scalable applications with modern DevOps practices.",
             icon: "☁️",
-            duration: "14 weeks",
-            level: "Advanced",
+            // duration: "14 weeks",
+            // level: "Advanced",
             features: ["AWS/Azure", "Docker", "Kubernetes", "CI/CD Pipelines"]
         },
         {
             title: "UI/UX Design Mastery",
             description: "Learn modern design principles and create beautiful, intuitive interfaces that drive user engagement and conversion.",
             icon: "🎨",
-            duration: "8 weeks",
-            level: "Beginner",
+            // duration: "8 weeks",
+            // level: "Beginner",
             features: ["Figma", "User Research", "Prototyping", "Design Systems"]
         },
         {
             title: "Java Development with Spring Boot",
             description: "Build enterprise-grade applications with Java and Spring Boot. Learn RESTful APIs, microservices architecture, and modern Java development practices for scalable backend systems.",
             icon: "☕",
-            duration: "14 weeks",
-            level: "Intermediate",
+            // duration: "14 weeks",
+            // level: "Intermediate",
             features: [
                 "Java 17+ & Spring Boot 3",
                 "RESTful API Development",
@@ -55,8 +55,8 @@ const Programs = () => {
             "title": "Data Science",
             "description": "Dive into the world of data science with Python. Learn to analyze, visualize, and model data to uncover insights and drive decisions.",
             "icon": "📊",
-            "duration": "12 weeks",
-            "level": "Intermediate",
+            // "duration": "12 weeks",
+            // "level": "Intermediate",
             "features": [
                 "Python for Data Analysis",
                 "Pandas & NumPy",
@@ -128,7 +128,7 @@ const Programs = () => {
                                     <span>{program.icon}</span>
                                 </div>
                                 <h3>{program.title}</h3>
-                                <p className="text-lg font-semibold text-purple-600 mb-2">{program.duration} • {program.level}</p>
+                                <p className="text-lg font-semibold text-purple-600 mb-2">{program.duration}  {program.level}</p>
                                 <p>{program.description}</p>
                                 <ul className="mt-4 text-left text-sm text-gray-600 space-y-1">
                                     {program.features.map((feature, i) => (

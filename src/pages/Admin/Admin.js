@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import './Admin.css';
+import users from './users.json';
 
 // Firebase configuration (same as Contact.js)
 const firebaseConfig = {
@@ -26,8 +27,8 @@ const Admin = () => {
   const [loginForm, setLoginForm] = useState({ username: '', password: '' });
   const [loginError, setLoginError] = useState('');
 
-  // Default user credentials
-  const defaultUser = { username: 'brothkotech', password: 'Brothko@ogi' };
+  // Use credentials from users.json
+  // const defaultUser = users[0]; // Assuming the first user in the JSON file
 
   const handleLoginChange = (e) => {
     setLoginForm({
@@ -36,12 +37,26 @@ const Admin = () => {
     });
   };
 
+  // const handleLoginSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (
+  //     loginForm.username === defaultUser.username &&
+  //     loginForm.password === defaultUser.password
+  //   ) {
+  //     setIsLoggedIn(true);
+  //     setLoginError('');
+  //     setLoginForm({ username: '', password: '' });
+  //   } else {
+  //     setLoginError('Invalid username or password');
+  //   }
+  // };
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    if (
-      loginForm.username === defaultUser.username &&
-      loginForm.password === defaultUser.password
-    ) {
+    const validUser = users.find(
+      (user) => user.username === loginForm.username && user.password === loginForm.password
+    );
+    if (validUser) {
       setIsLoggedIn(true);
       setLoginError('');
       setLoginForm({ username: '', password: '' });

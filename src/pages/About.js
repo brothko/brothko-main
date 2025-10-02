@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
+   const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    { src: 'roomyrentimg.jpg', alt: 'MyCertificate'  },
+    { src: 'brothkoinsimg.jpg', alt: 'Product Two' },
+    // { src: 'telegram.png', alt: 'Product Three' },
+    // { src: 'twitterslogo.png', alt: 'Partner One' },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => {
+        // If on the last slide, reset to 0; otherwise, increment
+        return prev === slides.length - 1 ? 0 : prev + 1;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
   return (
     <>
       <section className="hero" style={{ padding: '12rem 0 6rem' }}>
@@ -191,6 +212,41 @@ const About = () => {
             </div>
           </div>
 
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title text-center">Our Products & Partners</h2>
+          <div className="carousel">
+            <div
+              className="carousel-inner"
+              style={{
+                transform: `translateX(-${currentSlide * 100}%)`,
+                transition: currentSlide === 0 ? 'none' : 'transform 0.5s ease', // Disable transition when resetting to first slide
+              }}
+            >
+              {slides.map((slide, index) => (
+                <div className="carousel-item" key={index}>
+                  <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    className="carousel-image mx-auto"
+                  />
+                  <p className="text-center text-lg font-semibold mt-4">{slide.title}</p>
+                </div>
+              ))}
+            </div>
+            <div className="carousel-dots">
+              {slides.map((_, index) => (
+                <span
+                  key={index}
+                  className={`dot ${currentSlide === index ? 'active' : ''}`}
+                  onClick={() => handleDotClick(index)}
+                ></span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section">
