@@ -40,7 +40,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-lg mb-6">
-                At Brothko, we are dedicated to bridging the gap between education and industry by providing comprehensive training programs and cutting-edge software solutions. Our mission is to empower individuals and businesses with the skills and tools they need to succeed in the digital age.
+                At Surendra, we are dedicated to bridging the gap between education and industry by providing comprehensive training programs and cutting-edge software solutions. Our mission is to empower individuals and businesses with the skills and tools they need to succeed in the digital age.
               </p>
               <p className="text-lg">
                 With years of experience and a team of industry experts, we deliver exceptional results that drive growth and innovation.
