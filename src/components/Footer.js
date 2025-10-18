@@ -11,7 +11,7 @@ const Footer = () => {
       alert('Thank you for subscribing! 🎉');
       setEmail('');
     }
-  };
+  }; 
 
   return (
     <footer className="footer">
