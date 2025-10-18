@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="hero-content">
             <h1>Get In Touch</h1>
             <p>
-              Ready to start your journey with Brothko or have questions about our
+              Ready to start your new journey with Brothko or have questions about our
               services? We'd love to hear from you. Let's discuss how we can help
               you achieve your goals.
             </p>
