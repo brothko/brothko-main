@@ -97,9 +97,9 @@ const Header = () => {
         <div className="nav-mobile-overlay" onClick={toggleMenu}></div>
         <div className="nav-mobile-content">
           <div className="nav-mobile-header">
-            <Link to="/" className="logo-mobile" onClick={closeMenu}>
+            {/* <Link to="/" className="logo-mobile" onClick={closeMenu}>
               Brothko
-            </Link>
+            </Link> */}
             <button className="close-menu-btn" onClick={toggleMenu}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
